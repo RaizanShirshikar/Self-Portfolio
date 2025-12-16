@@ -3,8 +3,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
 import Autoplay from 'embla-carousel-autoplay';
@@ -76,10 +74,6 @@ export function HeroCarousel() {
             );
           })}
         </CarouselContent>
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex gap-4">
-            <CarouselPrevious className="relative -left-0 top-0 translate-y-0 text-white bg-white/10 border-white/20 hover:bg-white/20" />
-            <CarouselNext className="relative -right-0 top-0 translate-y-0 text-white bg-white/10 border-white/20 hover:bg-white/20" />
-        </div>
       </Carousel>
     </section>
   );
