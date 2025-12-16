@@ -21,15 +21,15 @@ const slides = [
   {
     id: 2,
     gradient: 'from-blue-500 via-cyan-500 to-teal-500',
-    title: 'Data-Driven Dashboards',
-    subtitle: 'Transforming complex data into intuitive, actionable insights with beautiful visualizations.',
+    title: 'Innovative Web Solutions',
+    subtitle: 'Crafting pixel-perfect, high-performance websites that captivate and convert.',
     imageId: '2',
   },
   {
     id: 3,
     gradient: 'from-orange-500 via-red-500 to-pink-500',
-    title: 'Engaging Mobile Apps',
-    subtitle: 'Building seamless mobile experiences that users love to interact with every day.',
+    title: 'Innovative Web Solutions',
+    subtitle: 'Crafting pixel-perfect, high-performance websites that captivate and convert.',
     imageId: '3',
   },
 ];
