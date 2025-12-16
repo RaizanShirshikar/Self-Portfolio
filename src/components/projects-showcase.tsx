@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -40,49 +40,48 @@ export function ProjectsShowcase() {
   const projectImages = PlaceHolderImages;
 
   return (
-    <div className="space-y-12">
-      <div className="text-center space-y-2">
-        <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl">Featured Projects</h2>
-        <p className="max-w-[700px] mx-auto text-muted-foreground md:text-lg">
-          Here are some of the projects I'm proud to have worked on.
+    <div className="container mx-auto px-4 md:px-6">
+      <div className="text-center space-y-4 mb-12">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter text-white">
+          My Portfolio
+        </h2>
+        <p className="max-w-2xl mx-auto text-lg text-gray-400">
+          Here are some of the projects I'm proud to have worked on, showcasing my skills in design and development.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => {
           const image = projectImages.find(img => img.id === project.imageId);
           return (
-            <Card key={project.id} className="group overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2 border-border/50">
-              <CardHeader className="p-0 border-b border-border/50">
-                  {image && (
-                      <Image
-                          src={image.imageUrl}
-                          alt={project.title}
-                          width={600}
-                          height={400}
-                          className="object-cover w-full h-48 group-hover:scale-105 transition-transform duration-300 ease-in-out"
-                          data-ai-hint={image.imageHint}
-                      />
-                  )}
-              </CardHeader>
-              <CardContent className="p-6 flex-grow">
-                <CardTitle className="text-xl font-bold mb-2">{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
+            <Card key={project.id} className="group/card bg-gray-900/50 border border-gray-800 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-gray-700">
+              <div className="overflow-hidden">
+                {image && (
+                    <Image
+                        src={image.imageUrl}
+                        alt={project.title}
+                        width={600}
+                        height={400}
+                        className="object-cover w-full h-48 aspect-[16/9] transition-transform duration-300 group-hover/card:scale-110"
+                        data-ai-hint={image.imageHint}
+                    />
+                )}
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-white mb-2 transition-colors duration-300 group-hover/card:bg-clip-text group-hover/card:text-transparent group-hover/card:bg-gradient-to-r group-hover/card:from-purple-400 group-hover/card:to-pink-600">{project.title}</h3>
+                <p className="text-gray-400 mb-4">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((t) => (
+                        <Badge key={t} variant="secondary" className="bg-gray-800 text-gray-300 border-none font-normal">{t}</Badge>
+                    ))}
+                </div>
+                <div className="flex gap-4">
+                  <Button asChild variant="ghost" className="text-purple-400 hover:text-pink-400 hover:bg-transparent p-0">
+                    <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      Live Demo <ArrowUpRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
               </CardContent>
-              <CardFooter className="p-6 pt-0 flex flex-col items-start gap-4">
-                  <div className="flex flex-wrap gap-2">
-                      {project.tech.map((t) => (
-                          <Badge key={t} variant="secondary" className="font-normal">{t}</Badge>
-                      ))}
-                  </div>
-                  <div className="flex gap-2 mt-auto pt-4">
-                      <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                          <Button variant="outline" size="sm" className="transition-all hover:bg-accent/10 hover:text-accent hover:border-accent">Live Demo <ArrowUpRight className="ml-2 h-4 w-4" /></Button>
-                      </Link>
-                      <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-                          <Button variant="ghost" size="sm">GitHub</Button>
-                      </Link>
-                  </div>
-              </CardFooter>
             </Card>
           )
         })}

@@ -1,49 +1,76 @@
+'use client';
 import Link from 'next/link';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import { Menu, MountainIcon } from 'lucide-react';
+import { Menu } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { cn } from '@/lib/utils';
 
 export function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 md:px-6">
+    <header className={cn(
+      "sticky top-0 z-50 w-full transition-all duration-300",
+      isScrolled ? "bg-black/60 backdrop-blur-lg border-b border-gray-800" : "bg-transparent border-b border-transparent"
+    )}>
+      <div className="container flex h-20 max-w-screen-2xl items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 font-bold" prefetch={false}>
-          <MountainIcon className="h-6 w-6 text-primary" />
-          <span className="font-headline text-lg">ApexFolio</span>
+          <span className="font-headline text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+            ApexFolio
+          </span>
         </Link>
-        <nav className="hidden font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
-          <Link href="/" className="transition-colors hover:text-primary" prefetch={false}>
-            Home
-          </Link>
-          <Link href="/about" className="text-muted-foreground transition-colors hover:text-primary" prefetch={false}>
+        <nav className="hidden font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-8">
+          <Link href="#about" className="text-gray-400 transition-colors hover:text-white" prefetch={false}>
             About
           </Link>
-          <Link href="/contact" className="text-muted-foreground transition-colors hover:text-primary" prefetch={false}>
+          <Link href="#projects" className="text-gray-400 transition-colors hover:text-white" prefetch={false}>
+            Projects
+          </Link>
+          <Link href="/contact" className="text-gray-400 transition-colors hover:text-white" prefetch={false}>
             Contact
           </Link>
         </nav>
+        <div className="hidden md:flex items-center gap-4">
+            <Button asChild className="rounded-full px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px] hover:shadow-pink-500/50">
+              <Link href="/contact">Hire Me</Link>
+            </Button>
+        </div>
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="shrink-0 md:hidden">
-              <Menu className="h-5 w-5" />
+            <Button variant="ghost" size="icon" className="shrink-0 md:hidden text-white hover:bg-gray-800">
+              <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right">
-            <nav className="grid gap-6 text-lg font-medium">
-              <Link href="/" className="flex items-center gap-2 text-lg font-semibold" prefetch={false}>
-                <MountainIcon className="h-6 w-6 text-primary" />
-                <span className="sr-only">ApexFolio</span>
+          <SheetContent side="right" className="bg-black/80 backdrop-blur-xl border-gray-800 text-white">
+            <nav className="grid gap-6 text-lg font-medium mt-16">
+               <Link href="/" className="flex items-center gap-2 text-lg font-semibold" prefetch={false}>
+                <span className="font-headline text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+                  ApexFolio
+                </span>
               </Link>
-              <Link href="/" className="hover:text-primary" prefetch={false}>
-                Home
-              </Link>
-              <Link href="/about" className="text-muted-foreground hover:text-primary" prefetch={false}>
+              <Link href="#about" className="text-gray-400 hover:text-white" prefetch={false}>
                 About
               </Link>
-              <Link href="/contact" className="text-muted-foreground hover:text-primary" prefetch={false}>
+              <Link href="#projects" className="text-gray-400 hover:text-white" prefetch={false}>
+                Projects
+              </Link>
+              <Link href="/contact" className="text-gray-400 hover:text-white" prefetch={false}>
                 Contact
               </Link>
+              <Button asChild className="rounded-full px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold">
+                <Link href="/contact">Hire Me</Link>
+              </Button>
             </nav>
           </SheetContent>
         </Sheet>

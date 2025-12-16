@@ -1,23 +1,19 @@
-import { Hero } from '@/components/hero';
-import { Skills } from '@/components/skills';
+import { HeroCarousel } from '@/components/hero-carousel';
+import { AboutMe } from '@/components/about-me';
 import { ProjectsShowcase } from '@/components/projects-showcase';
 import { ContactForm } from '@/components/contact-form';
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <Hero />
-      <section id="skills" className="w-full py-16 md:py-24 lg:py-32 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
-          <Skills />
-        </div>
+      <HeroCarousel />
+      <div id="about" className="py-16 md:py-24 lg:py-32">
+        <AboutMe />
+      </div>
+      <section id="projects" className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-black to-gray-900">
+        <ProjectsShowcase />
       </section>
-      <section id="projects" className="w-full py-16 md:py-24 lg:py-32 bg-card/80">
-        <div className="container mx-auto px-4 md:px-6">
-          <ProjectsShowcase />
-        </div>
-      </section>
-      <section id="contact" className="w-full py-16 md:py-24 lg:py-32 bg-background">
+      <section id="contact" className="w-full py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <ContactForm />
         </div>
