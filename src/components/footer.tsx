@@ -18,7 +18,7 @@ export function Footer() {
               Raizaan
             </h3>
             <p className="max-w-xs">
-              Crafting premium digital experiences with passion and precision. Let's build something amazing together.
+              IT professional skilled in networking, system support, and web development, passionate about building efficient and reliable digital solutions.
             </p>
           </div>
           <div className="space-y-4">
