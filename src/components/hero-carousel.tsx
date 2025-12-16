@@ -3,15 +3,12 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
 import Autoplay from 'embla-carousel-autoplay';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Card } from './ui/card';
 
 const slides = [
   {
@@ -41,7 +38,7 @@ export function HeroCarousel() {
   const images = PlaceHolderImages;
 
   return (
-    <section className="relative w-full h-screen min-h-[700px] overflow-hidden">
+    <section className="relative w-full h-[80vh] min-h-[600px] overflow-hidden">
       <Carousel
         className="w-full h-full"
         plugins={[Autoplay({ delay: 5000, stopOnInteraction: true })]}
