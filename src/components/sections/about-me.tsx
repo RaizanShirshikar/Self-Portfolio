@@ -21,7 +21,7 @@ export function AboutMe() {
                 About Me
               </div>
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter">
-                Crafting Digital Excellence
+                Raizaan Shirshikar
               </h2>
             </div>
             <div className="space-y-4 text-lg text-gray-400">
