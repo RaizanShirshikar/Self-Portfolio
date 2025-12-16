@@ -30,11 +30,14 @@ export function Header() {
           </span>
         </Link>
         <nav className="hidden font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-8">
-          <Link href="#about" className="text-gray-400 transition-colors hover:text-white" prefetch={false}>
+          <Link href="/#about" className="text-gray-400 transition-colors hover:text-white" prefetch={false}>
             About
           </Link>
-          <Link href="#projects" className="text-gray-400 transition-colors hover:text-white" prefetch={false}>
+          <Link href="/#projects" className="text-gray-400 transition-colors hover:text-white" prefetch={false}>
             Projects
+          </Link>
+          <Link href="/blog" className="text-gray-400 transition-colors hover:text-white" prefetch={false}>
+            Blog
           </Link>
           <Link href="/contact" className="text-gray-400 transition-colors hover:text-white" prefetch={false}>
             Contact
@@ -59,11 +62,14 @@ export function Header() {
                   ApexFolio
                 </span>
               </Link>
-              <Link href="#about" className="text-gray-400 hover:text-white" prefetch={false}>
+              <Link href="/#about" className="text-gray-400 hover:text-white" prefetch={false}>
                 About
               </Link>
-              <Link href="#projects" className="text-gray-400 hover:text-white" prefetch={false}>
+              <Link href="/#projects" className="text-gray-400 hover:text-white" prefetch={false}>
                 Projects
+              </Link>
+               <Link href="/blog" className="text-gray-400 hover:text-white" prefetch={false}>
+                Blog
               </Link>
               <Link href="/contact" className="text-gray-400 hover:text-white" prefetch={false}>
                 Contact

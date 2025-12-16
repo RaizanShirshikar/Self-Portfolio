@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Github, Linkedin, Twitter } from 'lucide-react';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 
 export function AboutMe() {
   const stats = [
