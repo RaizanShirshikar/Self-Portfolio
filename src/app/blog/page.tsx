@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Blog | ApexFolio',
+  title: 'Blog | Raizaan',
   description: 'Read the latest articles and tutorials on web development, design, and more.',
 };
 

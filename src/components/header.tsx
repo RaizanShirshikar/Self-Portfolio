@@ -26,7 +26,7 @@ export function Header() {
       <div className="container flex h-20 max-w-screen-2xl items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 font-bold" prefetch={false}>
           <span className="font-headline text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
-            ApexFolio
+            Raizaan
           </span>
         </Link>
         <nav className="hidden font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-8">
@@ -59,7 +59,7 @@ export function Header() {
             <nav className="grid gap-6 text-lg font-medium mt-16">
                <Link href="/" className="flex items-center gap-2 text-lg font-semibold" prefetch={false}>
                 <span className="font-headline text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
-                  ApexFolio
+                  Raizaan
                 </span>
               </Link>
               <Link href="/#about" className="text-gray-400 hover:text-white" prefetch={false}>

@@ -2,7 +2,7 @@ import { ContactForm } from '@/components/contact-form';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Contact | ApexFolio',
+    title: 'Contact | Raizaan',
     description: 'Get in touch with the developer. Send a message about a project, collaboration, or just to say hello.',
 };
 

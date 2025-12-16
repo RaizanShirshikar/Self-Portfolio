@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { AOSProvider } from '@/components/aos-provider';
 
 export const metadata: Metadata = {
-  title: 'ApexFolio | Creative Developer Portfolio',
+  title: 'Raizaan | Creative Developer Portfolio',
   description: 'The personal portfolio of a creative full-stack developer.',
 };
 

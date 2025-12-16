@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'About Me | ApexFolio',
-    description: 'Learn more about the developer behind ApexFolio, their journey, and their passion for coding.',
+    title: 'About Me | Raizaan',
+    description: 'Learn more about the developer behind Raizaan, their journey, and their passion for coding.',
 };
 
 export default function AboutPage() {

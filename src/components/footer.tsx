@@ -15,7 +15,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
-              ApexFolio
+              Raizaan
             </h3>
             <p className="max-w-xs">
               Crafting premium digital experiences with passion and precision. Let's build something amazing together.
@@ -33,7 +33,7 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white tracking-wider uppercase">Get In Touch</h4>
             <p>
-              Email: <Link href="mailto:hello@apexfelio.com" className="hover:text-white transition-colors">hello@apexfelio.com</Link>
+              Email: <Link href="mailto:hello@raizaan.com" className="hover:text-white transition-colors">hello@raizaan.com</Link>
             </p>
             <div className="flex items-center gap-4">
                 {socialLinks.map((social, index) => (
@@ -47,7 +47,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} ApexFolio. All rights reserved. Built with Next.js and Tailwind CSS.</p>
+          <p>&copy; {new Date().getFullYear()} Raizaan. All rights reserved. Built with Next.js and Tailwind CSS.</p>
         </div>
       </div>
     </footer>
