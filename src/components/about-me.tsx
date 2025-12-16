@@ -12,7 +12,7 @@ export function AboutMe() {
   ];
 
   return (
-    <section className="w-full bg-black text-white">
+    <section className="w-full bg-black text-white" data-aos="fade-up">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-6">

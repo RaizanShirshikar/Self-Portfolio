@@ -40,7 +40,7 @@ export function ProjectsShowcase() {
   const projectImages = PlaceHolderImages;
 
   return (
-    <div className="container mx-auto px-4 md:px-6">
+    <div className="container mx-auto px-4 md:px-6" data-aos="fade-up">
       <div className="text-center space-y-4 mb-12">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter text-white">
           My Portfolio

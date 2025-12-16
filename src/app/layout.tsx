@@ -3,6 +3,7 @@ import './globals.css';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Toaster } from "@/components/ui/toaster"
+import { AOSProvider } from '@/components/aos-provider';
 
 export const metadata: Metadata = {
   title: 'ApexFolio | Creative Developer Portfolio',
@@ -22,10 +23,12 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased bg-black">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <Toaster />
+        <AOSProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <Toaster />
+        </AOSProvider>
       </body>
     </html>
   );

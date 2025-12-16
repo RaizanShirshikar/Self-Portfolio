@@ -44,7 +44,7 @@ export function ContactForm() {
   }, [state, toast]);
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center" data-aos="fade-up">
       <Card className="w-full max-w-2xl bg-gray-900/50 border border-gray-800 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-gray-700">
         <CardHeader className="text-center p-8">
           <CardTitle className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter text-white">Get in Touch</CardTitle>
