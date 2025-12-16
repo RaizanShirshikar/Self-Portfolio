@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <HeroCarousel />
-      <div id="about" className="py-16 md:py-24 lg:py-32">
+      <div id="about" className="py-8 md:py-12 lg:py-16">
         <AboutMe />
       </div>
       <section id="projects" className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-black to-gray-900">
