@@ -38,7 +38,7 @@ export function HeroCarousel() {
   const images = PlaceHolderImages;
 
   return (
-    <section className="relative w-full h-[80vh] min-h-[600px] overflow-hidden">
+    <section className="relative w-full h-[70vh] min-h-[550px] overflow-hidden">
       <Carousel
         className="w-full h-full"
         plugins={[Autoplay({ delay: 5000, stopOnInteraction: true })]}
