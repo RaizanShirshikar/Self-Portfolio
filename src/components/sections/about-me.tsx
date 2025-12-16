@@ -26,10 +26,7 @@ export function AboutMe() {
             </div>
             <div className="space-y-4 text-lg text-gray-400">
               <p>
-                Hello! I'm John, a passionate developer with a knack for creating elegant solutions in the least amount of time. My journey into the world of coding started back in high school with a simple "Hello, World!" in Python, and I've been hooked ever since.
-              </p>
-              <p>
-                I thrive on turning complex problems into simple, beautiful, and intuitive designs. I love the entire process of software development, from brainstorming and wireframing to coding and deploying. For me, there's nothing more satisfying than seeing an idea come to life on the screen.
+                I’m an IT professional with hands-on experience in networking, Wi-Fi installation, and system support, with a strong foundation in web development and UI/UX design. I love building clean, user-focused websites and exploring AI tools to improve workflows, productivity, and digital experiences. I enjoy creating practical, reliable solutions while continuously learning modern technologies.
               </p>
             </div>
             <div className="flex items-center gap-4 pt-4">

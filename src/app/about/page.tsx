@@ -20,7 +20,7 @@ export default function AboutPage() {
             {profileImage && (
               <Image
                 src={profileImage.imageUrl}
-                alt="Profile picture of John Doe"
+                alt="Profile picture of Raizaan Shirshikar"
                 width={400}
                 height={400}
                 className="rounded-full object-cover aspect-square border-4 border-primary shadow-lg shadow-primary/20"
@@ -32,17 +32,17 @@ export default function AboutPage() {
           <div className="space-y-6" data-aos="fade-left">
             <div className="space-y-2">
               <p className="text-lg text-primary font-semibold">A Developer's Journey</p>
-              <h1 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h1>
+              <h1 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl">About Raizaan Shirshikar</h1>
             </div>
             <div className="space-y-4 text-muted-foreground text-lg/relaxed">
               <p>
-                Hello! I'm John, a passionate developer with a knack for creating elegant solutions in the least amount of time. My journey into the world of coding started back in high school with a simple "Hello, World!" in Python, and I've been hooked ever since.
+                I’m an IT professional with hands-on experience in networking, Wi-Fi installation, and system support, with a strong foundation in web development and UI/UX design.
               </p>
               <p>
-                I thrive on turning complex problems into simple, beautiful, and intuitive designs. I love the entire process of software development, from brainstorming and wireframing to coding and deploying. For me, there's nothing more satisfying than seeing an idea come to life on the screen.
+                I love building clean, user-focused websites and exploring AI tools to improve workflows, productivity, and digital experiences.
               </p>
               <p>
-                When I'm not in front of a computer screen, you can probably find me exploring the great outdoors, experimenting in the kitchen, or getting lost in a good book. I believe in lifelong learning and am always excited to pick up new skills.
+                I enjoy creating practical, reliable solutions while continuously learning modern technologies.
               </p>
             </div>
              <Link href="/contact" prefetch={false}>
