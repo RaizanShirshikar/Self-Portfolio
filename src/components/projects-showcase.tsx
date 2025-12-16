@@ -86,6 +86,11 @@ export function ProjectsShowcase() {
           )
         })}
       </div>
+      <div className="mt-16 text-center">
+        <Button asChild size="lg" className="bg-white text-black font-bold rounded-full px-8 py-6 text-lg hover:bg-gray-200 transition-transform hover:scale-105">
+            <Link href="#">View All Projects</Link>
+        </Button>
+      </div>
     </div>
   );
 }
