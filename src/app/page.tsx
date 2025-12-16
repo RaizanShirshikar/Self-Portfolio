@@ -7,9 +7,15 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Hero />
-      <About />
-      <Projects />
-      <Contact />
+      <div id="about" className="py-8 md:py-12 lg:py-16">
+        <About />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
     </div>
   );
 }

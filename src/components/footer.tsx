@@ -24,8 +24,8 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white tracking-wider uppercase">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/#about" className="hover:text-white transition-colors">About Me</Link></li>
-              <li><Link href="/#projects" className="hover:text-white transition-colors">Projects</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About Me</Link></li>
+              <li><Link href="/projects" className="hover:text-white transition-colors">Projects</Link></li>
               <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
