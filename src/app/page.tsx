@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Hero />
-      <div id="about" className="py-8 md:py-12 lg:py-16">
+      <div id="about">
         <About />
       </div>
       <div id="projects">

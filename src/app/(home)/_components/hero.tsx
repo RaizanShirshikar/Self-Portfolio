@@ -1,5 +1,9 @@
 import { HeroCarousel } from '@/components/sections/hero-carousel';
 
 export function Hero() {
-  return <HeroCarousel />;
+  return (
+    <div data-aos="fade-in">
+        <HeroCarousel />
+    </div>
+  );
 }

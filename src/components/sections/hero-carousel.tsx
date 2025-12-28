@@ -4,7 +4,6 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel';
-import { Button } from '@/components/ui/button';
 import Autoplay from 'embla-carousel-autoplay';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
@@ -13,24 +12,18 @@ import Link from 'next/link';
 const slides = [
   {
     id: 1,
-    gradient: 'from-purple-500 via-pink-500 to-red-500',
-    title: 'Innovative Web Solutions',
-    subtitle: 'Crafting pixel-perfect, high-performance websites that captivate and convert.',
     imageId: '1',
+    href: '/projects/project-1',
   },
   {
     id: 2,
-    gradient: 'from-blue-500 via-cyan-500 to-teal-500',
-    title: 'Innovative Web Solutions',
-    subtitle: 'Crafting pixel-perfect, high-performance websites that captivate and convert.',
     imageId: '2',
+    href: '/projects/project-2',
   },
   {
     id: 3,
-    gradient: 'from-orange-500 via-red-500 to-pink-500',
-    title: 'Innovative Web Solutions',
-    subtitle: 'Crafting pixel-perfect, high-performance websites that captivate and convert.',
     imageId: '3',
+    href: '/projects/project-3',
   },
 ];
 
@@ -49,31 +42,34 @@ export function HeroCarousel() {
             const image = images.find((img) => img.id === slide.imageId);
             return (
               <CarouselItem key={slide.id} className="relative w-full h-full">
-                <div className={`absolute inset-0 bg-gradient-to-br ${slide.gradient} opacity-80`}></div>
-                 <div className="absolute inset-0 bg-black/40"></div>
-
-                 {/* Animated blur circles */}
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/10 rounded-full animate-pulse-blur" style={{ animationDelay: '0s' }}></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full animate-pulse-blur" style={{ animationDelay: '3s' }}></div>
-
-                <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
-                  <div className="space-y-6 max-w-4xl animate-fade-in-up">
-                    <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter">
-                      {slide.title}
-                    </h1>
-                    <p className="text-xl sm:text-2xl md:text-3xl font-light text-gray-200">
-                      {slide.subtitle}
-                    </p>
-                    <Button asChild size="lg" className="bg-white text-black font-bold rounded-full px-8 py-6 text-lg hover:bg-gray-200 transition-transform hover:scale-105">
-                      <Link href="#projects">View My Work</Link>
-                    </Button>
-                  </div>
-                </div>
+                {image && (
+                  <Link href={slide.href} className="block w-full h-full">
+                    <Image
+                      src={image.imageUrl}
+                      alt={image.description}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={image.imageHint}
+                      priority={slide.id === 1}
+                    />
+                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+                  </Link>
+                )}
               </CarouselItem>
             );
           })}
         </CarouselContent>
       </Carousel>
+       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-center text-white p-4">
+          <div className="space-y-4 max-w-4xl" data-aos="fade-up">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter text-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+              Raizaan Shirshikar
+            </h1>
+            <p className="text-xl sm:text-2xl font-light text-gray-200 text-shadow-[0_1px_5px_rgba(0,0,0,0.5)]">
+              Creative Developer & UI/UX Designer
+            </p>
+          </div>
+        </div>
     </section>
   );
 }
