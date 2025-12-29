@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '../ui/button';
 
 export function AboutMe() {
@@ -40,9 +40,9 @@ export function AboutMe() {
                   <Linkedin className="h-6 w-6" />
                 </Link>
               </Button>
-               <Button asChild className="group h-12 w-12 rounded-full bg-gradient-to-r from-sky-400 to-blue-600 text-white transition-transform duration-300 hover:scale-110">
+               <Button asChild className="group h-12 w-12 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white transition-transform duration-300 hover:scale-110">
                 <Link href="#">
-                  <Twitter className="h-6 w-6" />
+                  <Instagram className="h-6 w-6" />
                 </Link>
               </Button>
             </div>

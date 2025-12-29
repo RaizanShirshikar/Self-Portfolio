@@ -1,11 +1,10 @@
 import Link from 'next/link';
-import { Github, Twitter, Linkedin, Dribbble } from 'lucide-react';
+import { Github, Linkedin, Instagram } from 'lucide-react';
 
 const socialLinks = [
     { icon: Github, href: '#', hoverColor: 'hover:from-purple-500 hover:to-pink-500', name: 'Github' },
     { icon: Linkedin, href: '#', hoverColor: 'hover:from-blue-500 hover:to-cyan-500', name: 'LinkedIn' },
-    { icon: Twitter, href: '#', hoverColor: 'hover:from-sky-400 hover:to-blue-600', name: 'Twitter' },
-    { icon: Dribbble, href: '#', hoverColor: 'hover:from-pink-500 hover:to-orange-400', name: 'Dribbble' },
+    { icon: Instagram, href: '#', hoverColor: 'hover:from-pink-500 hover:to-orange-400', name: 'Instagram' },
 ];
 
 export function Footer() {
