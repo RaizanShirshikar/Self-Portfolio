@@ -6,6 +6,7 @@ import { Menu } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
+import { siteConfig } from '@/lib/content/site';
 
 const navLinks = [
   { href: '/about', label: 'About' },
@@ -35,7 +36,7 @@ export function Header() {
       <div className="container flex h-20 max-w-screen-2xl items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 font-bold" prefetch={false}>
           <span className="font-headline text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
-            Raizaan
+            {siteConfig.name}
           </span>
         </Link>
         <nav className="hidden font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-8">
@@ -55,7 +56,7 @@ export function Header() {
         </nav>
         <div className="hidden md:flex items-center gap-4">
             <Button asChild className="rounded-full px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px] hover:shadow-pink-500/50">
-              <Link href="/contact">Hire Me</Link>
+              <Link href={siteConfig.whatsappUrl} target="_blank" rel="noopener noreferrer">Hire Me</Link>
             </Button>
         </div>
         <Sheet>
@@ -69,7 +70,7 @@ export function Header() {
             <nav className="grid gap-6 text-lg font-medium mt-16">
                <Link href="/" className="flex items-center gap-2 text-lg font-semibold" prefetch={false}>
                 <span className="font-headline text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
-                  Raizaan
+                  {siteConfig.name}
                 </span>
               </Link>
               {navLinks.map((link) => (
@@ -86,7 +87,7 @@ export function Header() {
                 </Link>
               ))}
               <Button asChild className="rounded-full px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold">
-                <Link href="/contact">Hire Me</Link>
+                <Link href={siteConfig.whatsappUrl} target="_blank" rel="noopener noreferrer">Hire Me</Link>
               </Button>
             </nav>
           </SheetContent>
