@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Github } from 'lucide-react';
 
 const projects = [
   {
@@ -80,6 +80,11 @@ export function ProjectsShowcase() {
                   <Button asChild variant="ghost" className="text-purple-400 hover:text-pink-400 hover:bg-transparent p-0">
                     <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       Live Demo <ArrowUpRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                  <Button asChild variant="ghost" className="text-gray-400 hover:text-white hover:bg-transparent p-0">
+                    <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                      View Code <Github className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
