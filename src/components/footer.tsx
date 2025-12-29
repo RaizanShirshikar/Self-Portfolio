@@ -2,10 +2,10 @@ import Link from 'next/link';
 import { Github, Twitter, Linkedin, Dribbble } from 'lucide-react';
 
 const socialLinks = [
-    { icon: Github, href: '#', hoverColor: 'hover:from-purple-500 hover:to-pink-500' },
-    { icon: Linkedin, href: '#', hoverColor: 'hover:from-blue-500 hover:to-cyan-500' },
-    { icon: Twitter, href: '#', hoverColor: 'hover:from-sky-400 hover:to-blue-600' },
-    { icon: Dribbble, href: '#', hoverColor: 'hover:from-pink-500 hover:to-orange-400' },
+    { icon: Github, href: '#', hoverColor: 'hover:from-purple-500 hover:to-pink-500', name: 'Github' },
+    { icon: Linkedin, href: '#', hoverColor: 'hover:from-blue-500 hover:to-cyan-500', name: 'LinkedIn' },
+    { icon: Twitter, href: '#', hoverColor: 'hover:from-sky-400 hover:to-blue-600', name: 'Twitter' },
+    { icon: Dribbble, href: '#', hoverColor: 'hover:from-pink-500 hover:to-orange-400', name: 'Dribbble' },
 ];
 
 export function Footer() {
@@ -36,8 +36,8 @@ export function Footer() {
               Email: <Link href="mailto:hello@raizaan.com" className="hover:text-white transition-colors">hello@raizaan.com</Link>
             </p>
             <div className="flex items-center gap-4">
-                {socialLinks.map((social, index) => (
-                    <Link key={index} href={social.href} target="_blank" rel="noopener noreferrer">
+                {socialLinks.map((social) => (
+                    <Link key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.name}>
                         <div className={`w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 transition-all duration-300 transform hover:scale-110 hover:text-white hover:bg-gradient-to-r ${social.hoverColor}`}>
                             <social.icon className="w-5 h-5" />
                         </div>
