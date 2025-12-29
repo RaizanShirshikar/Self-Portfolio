@@ -28,20 +28,23 @@ export function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
-    if (state.success) {
-      toast({
-        title: 'Message Sent!',
-        description: state.message,
-      });
-      formRef.current?.reset();
-    } else if (!state.success && state.message && state.errors) {
-      toast({
-        variant: 'destructive',
-        title: 'An error occurred',
-        description: state.message,
-      });
+    if (state.message) {
+      if (state.success) {
+        toast({
+          title: 'Message Sent!',
+          description: state.message,
+        });
+        formRef.current?.reset();
+      } else {
+        toast({
+          variant: 'destructive',
+          title: 'An error occurred',
+          description: state.message,
+        });
+      }
     }
   }, [state, toast]);
+
 
   return (
     <div className="flex justify-center" data-aos="fade-up">

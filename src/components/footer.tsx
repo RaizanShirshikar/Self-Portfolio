@@ -1,11 +1,6 @@
 import Link from 'next/link';
-import { Github, Linkedin, Instagram } from 'lucide-react';
+import { footerContent, siteConfig } from '@/lib/content/site';
 
-const socialLinks = [
-    { icon: Github, href: '#', hoverColor: 'hover:from-purple-500 hover:to-pink-500', name: 'Github' },
-    { icon: Linkedin, href: '#', hoverColor: 'hover:from-blue-500 hover:to-cyan-500', name: 'LinkedIn' },
-    { icon: Instagram, href: '#', hoverColor: 'hover:from-pink-500 hover:to-orange-400', name: 'Instagram' },
-];
 
 export function Footer() {
   return (
@@ -14,19 +9,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
-              Raizaan
+              {siteConfig.name}
             </h3>
             <p className="max-w-xs">
-              IT professional skilled in networking, system support, and web development, passionate about building efficient and reliable digital solutions.
+              {footerContent.description}
             </p>
           </div>
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white tracking-wider uppercase">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/about" className="hover:text-white transition-colors">About Me</Link></li>
-              <li><Link href="/projects" className="hover:text-white transition-colors">Projects</Link></li>
-              <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              {footerContent.quickLinks.map((link) => (
+                 <li><Link href={link.href} className="hover:text-white transition-colors">{link.label}</Link></li>
+              ))}
             </ul>
           </div>
           <div className="space-y-4">
@@ -35,7 +29,7 @@ export function Footer() {
               Email: <Link href="mailto:hello@raizaan.com" className="hover:text-white transition-colors">hello@raizaan.com</Link>
             </p>
             <div className="flex items-center gap-4">
-                {socialLinks.map((social) => (
+                {footerContent.socialLinks.map((social) => (
                     <Link key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.name}>
                         <div className={`w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 transition-all duration-300 transform hover:scale-110 hover:text-white hover:bg-gradient-to-r ${social.hoverColor}`}>
                             <social.icon className="w-5 h-5" />
@@ -46,7 +40,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Raizaan. All rights reserved. Built with Next.js and Tailwind CSS.</p>
+          <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved. Built with Next.js and Tailwind CSS.</p>
         </div>
       </div>
     </footer>
