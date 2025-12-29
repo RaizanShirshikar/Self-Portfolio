@@ -26,7 +26,7 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white tracking-wider uppercase">Get In Touch</h4>
             <p>
-              Email: <Link href="mailto:hello@raizaan.com" className="hover:text-white transition-colors">hello@raizaan.com</Link>
+              Email: <Link href="mailto:hello@raizaan.com" className="hover:text-white transition-colors">raizanshirshikar2@gmail.com</Link>
             </p>
             <div className="flex items-center gap-4">
                 {footerContent.socialLinks.map((social) => (

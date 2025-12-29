@@ -5,8 +5,8 @@ import { Button } from '../ui/button';
 
 export function AboutMe() {
   const stats = [
-    { value: '5+', label: 'Years of Experience' },
-    { value: '50+', label: 'Projects Completed' },
+    { value: '2+', label: 'Years of Experience' },
+    { value: '10+', label: 'Projects Completed' },
     { value: '100%', label: 'Client Satisfaction' },
     { value: '1M+', label: 'Lines of Code' },
   ];
@@ -31,17 +31,17 @@ export function AboutMe() {
             </div>
             <div className="flex items-center gap-4 pt-4">
               <Button asChild className="group h-12 w-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white transition-transform duration-300 hover:scale-110">
-                <Link href="#">
+                <Link href="https://github.com/RaizanShirshikar">
                   <Github className="h-6 w-6" />
                 </Link>
               </Button>
               <Button asChild className="group h-12 w-12 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white transition-transform duration-300 hover:scale-110">
-                <Link href="#">
+                <Link href="www.linkedin.com/in/raizaan-shirshikar-539261196">
                   <Linkedin className="h-6 w-6" />
                 </Link>
               </Button>
                <Button asChild className="group h-12 w-12 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white transition-transform duration-300 hover:scale-110">
-                <Link href="#">
+                <Link href="https://www.instagram.com/itz_raizaan?igsh=dmVubzQ1bmh6Y2w4">
                   <Instagram className="h-6 w-6" />
                 </Link>
               </Button>

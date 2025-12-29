@@ -29,6 +29,8 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+    // Add this line to enable local images
+    unoptimized: true,
   },
 };
 

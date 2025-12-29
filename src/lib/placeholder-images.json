@@ -3,25 +3,26 @@
     {
       "id": "1",
       "description": "e-commerce project",
-      "imageUrl": "https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3ZWJzaXRlJTIwZWNvbW1lcmNlfGVufDB8fHx8MTc2NTg2NDEzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/ec.png",
       "imageHint": "website ecommerce"
     },
     {
       "id": "2",
       "description": "SaaS dashboard project",
-      "imageUrl": "https://images.unsplash.com/photo-1686061592689-312bbfb5c055?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXNoYm9hcmQlMjBkYXRhfGVufDB8fHx8MTc2NTgwMjkyMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl":"/images/es1.png",
       "imageHint": "dashboard data"
     },
     {
       "id": "3",
       "description": "mobile banking project",
-      "imageUrl": "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzY1Nzg4MTQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/es2.png",
       "imageHint": "mobile app"
-    },
+    }
+    ,
     {
       "id": "4",
       "description": "profile picture",
-      "imageUrl": "https://images.unsplash.com/photo-1609542449464-48e229fdbc7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb3J0cmFpdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjU3NjU4OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/raizan.png",
       "imageHint": "portrait person"
     }
   ]

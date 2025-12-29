@@ -8,6 +8,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import Link from 'next/link';
+import { heroContent } from '@/lib/content/site';
 
 const slides = [
   {
@@ -61,13 +62,19 @@ export function HeroCarousel() {
         </CarouselContent>
       </Carousel>
        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white p-4 pointer-events-none">
-          <div className="space-y-4 max-w-4xl" data-aos="fade-up">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter text-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
-              Raizaan Shirshikar
-            </h1>
-            <p className="text-xl sm:text-2xl font-light text-gray-200 text-shadow-[0_1px_5px_rgba(0,0,0,0.5)]">
-              Creative Developer & UI/UX Designer
-            </p>
+          <div 
+            className="relative space-y-4 max-w-4xl p-8 rounded-2xl" 
+            data-aos="fade-up"
+          >
+            <div className="absolute -inset-4 bg-gradient-to-br from-purple-600/20 via-pink-600/20 to-indigo-600/20 rounded-3xl blur-2xl animate-pulse-blur"></div>
+            <div className="relative">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter text-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+                {heroContent.title}
+              </h1>
+              <p className="text-xl sm:text-2xl font-light text-gray-200 text-shadow-[0_1px_5px_rgba(0,0,0,0.5)]">
+                {heroContent.subtitle}
+              </p>
+            </div>
           </div>
         </div>
     </section>

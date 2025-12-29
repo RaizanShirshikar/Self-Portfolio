@@ -7,7 +7,7 @@ export const siteConfig = {
     // You can add your own whatsapp number here.
     // replace with your own whatsapp number.
     // example: "https://wa.me/1234567890"
-    whatsappUrl: "https://wa.me/your-number-here", 
+    whatsappUrl: "https://wa.me/+918975087326", 
 };
 
 export const heroContent = {
@@ -34,9 +34,9 @@ export const contactContent = {
 export const footerContent = {
     description: "IT professional skilled in networking, system support, and web development, passionate about building efficient and reliable digital solutions.",
     socialLinks: [
-        { icon: Github, href: '#', hoverColor: 'hover:from-purple-500 hover:to-pink-500', name: 'Github' },
-        { icon: Linkedin, href: '#', hoverColor: 'hover:from-blue-500 hover:to-cyan-500', name: 'LinkedIn' },
-        { icon: Instagram, href: '#', hoverColor: 'hover:from-pink-500 hover:to-orange-400', name: 'Instagram' },
+        { icon: Github, href: 'https://github.com/RaizanShirshikar', hoverColor: 'hover:from-purple-500 hover:to-pink-500', name: 'Github' },
+        { icon: Linkedin, href: 'https://www.linkedin.com/in/raizaanshirshikar', hoverColor: 'hover:from-blue-500 hover:to-cyan-500', name: 'LinkedIn' },
+        { icon: Instagram, href: 'https://www.instagram.com/itz_raizaan?igsh=dmVubzQ1bmh6Y2w4', hoverColor: 'hover:from-pink-500 hover:to-orange-400', name: 'Instagram' },
     ],
     quickLinks: [
         { href: '/about', label: 'About Me' },
