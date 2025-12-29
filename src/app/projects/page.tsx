@@ -89,6 +89,7 @@ export default function ProjectsPage() {
                         <Card key={project.id} className="group/card bg-gray-900/50 border border-gray-800 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-gray-700">
                         <div className="overflow-hidden">
                             {image && (
+                                <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                 <Image
                                     src={image.imageUrl}
                                     alt={project.title}
@@ -97,6 +98,7 @@ export default function ProjectsPage() {
                                     className="object-cover w-full h-48 aspect-[16/9] transition-transform duration-300 group-hover/card:scale-110"
                                     data-ai-hint={image.imageHint}
                                 />
+                                </Link>
                             )}
                         </div>
                         <CardContent className="p-6">

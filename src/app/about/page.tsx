@@ -6,7 +6,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'About Me | Raizaan',
-    description: 'Learn more about the developer behind Raizaan, their journey, and their passion for coding.',
+    description: 'Learn more about Raizaan Shirshikar, their journey, and passion for coding.',
 };
 
 export default function AboutPage() {

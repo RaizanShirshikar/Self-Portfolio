@@ -40,7 +40,7 @@ export function AboutMe() {
                   <Linkedin className="h-6 w-6" />
                 </Link>
               </Button>
-               <Button asChild className="group h-12 w-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white transition-transform duration-300 hover:scale-110">
+               <Button asChild className="group h-12 w-12 rounded-full bg-gradient-to-r from-sky-400 to-blue-600 text-white transition-transform duration-300 hover:scale-110">
                 <Link href="#">
                   <Twitter className="h-6 w-6" />
                 </Link>

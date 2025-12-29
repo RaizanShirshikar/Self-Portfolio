@@ -5,9 +5,18 @@ import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation';
+
+const navLinks = [
+  { href: '/about', label: 'About' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' },
+];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,18 +39,19 @@ export function Header() {
           </span>
         </Link>
         <nav className="hidden font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-8">
-          <Link href="/about" className="text-gray-400 transition-colors hover:text-white" prefetch={false}>
-            About
-          </Link>
-          <Link href="/projects" className="text-gray-400 transition-colors hover:text-white" prefetch={false}>
-            Projects
-          </Link>
-          <Link href="/blog" className="text-gray-400 transition-colors hover:text-white" prefetch={false}>
-            Blog
-          </Link>
-          <Link href="/contact" className="text-gray-400 transition-colors hover:text-white" prefetch={false}>
-            Contact
-          </Link>
+          {navLinks.map((link) => (
+            <Link 
+              key={link.href}
+              href={link.href} 
+              className={cn(
+                "transition-colors hover:text-white",
+                pathname === link.href ? "text-white" : "text-gray-400"
+              )} 
+              prefetch={false}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
         <div className="hidden md:flex items-center gap-4">
             <Button asChild className="rounded-full px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px] hover:shadow-pink-500/50">
@@ -62,18 +72,19 @@ export function Header() {
                   Raizaan
                 </span>
               </Link>
-              <Link href="/about" className="text-gray-400 hover:text-white" prefetch={false}>
-                About
-              </Link>
-              <Link href="/projects" className="text-gray-400 hover:text-white" prefetch={false}>
-                Projects
-              </Link>
-               <Link href="/blog" className="text-gray-400 hover:text-white" prefetch={false}>
-                Blog
-              </Link>
-              <Link href="/contact" className="text-gray-400 hover:text-white" prefetch={false}>
-                Contact
-              </Link>
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.href}
+                  href={link.href} 
+                  className={cn(
+                    "transition-colors hover:text-white",
+                     pathname === link.href ? "text-white" : "text-gray-400"
+                  )} 
+                  prefetch={false}
+                >
+                  {link.label}
+                </Link>
+              ))}
               <Button asChild className="rounded-full px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold">
                 <Link href="/contact">Hire Me</Link>
               </Button>

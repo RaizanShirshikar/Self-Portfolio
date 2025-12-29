@@ -13,17 +13,17 @@ const slides = [
   {
     id: 1,
     imageId: '1',
-    href: '/projects/project-1',
+    href: '/projects',
   },
   {
     id: 2,
     imageId: '2',
-    href: '/projects/project-2',
+    href: '/projects',
   },
   {
     id: 3,
     imageId: '3',
-    href: '/projects/project-3',
+    href: '/projects',
   },
 ];
 
@@ -43,7 +43,7 @@ export function HeroCarousel() {
             return (
               <CarouselItem key={slide.id} className="relative w-full h-full">
                 {image && (
-                  <Link href={slide.href} className="block w-full h-full">
+                  <Link href={slide.href} className="block w-full h-full group">
                     <Image
                       src={image.imageUrl}
                       alt={image.description}
@@ -52,7 +52,7 @@ export function HeroCarousel() {
                       data-ai-hint={image.imageHint}
                       priority={slide.id === 1}
                     />
-                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+                     <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-300"></div>
                   </Link>
                 )}
               </CarouselItem>
@@ -60,7 +60,7 @@ export function HeroCarousel() {
           })}
         </CarouselContent>
       </Carousel>
-       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-center text-white p-4">
+       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white p-4 pointer-events-none">
           <div className="space-y-4 max-w-4xl" data-aos="fade-up">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter text-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
               Raizaan Shirshikar

@@ -7,15 +7,9 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Hero />
-      <div id="about">
-        <About />
-      </div>
-      <div id="projects">
-        <Projects />
-      </div>
-      <div id="contact">
-        <Contact />
-      </div>
+      <About />
+      <Projects />
+      <Contact />
     </div>
   );
 }
